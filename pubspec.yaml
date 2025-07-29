@@ -1,0 +1,15 @@
+name: multi_builder
+description: "multi_builder"
+version: 1.0.0
+homepage: https://github.com/wyq0918dev/multi_builder
+
+environment:
+  sdk: ^3.8.1
+  flutter: ">=3.3.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
