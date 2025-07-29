@@ -1,8 +1,8 @@
 # multi_builder
 
-轻松的在 WidgetsApp MaterialApp 或 CupertinoApp 中使用多个 TransitionBuilder
+轻松的在 WidgetsApp MaterialApp 或 CupertinoApp 中使用多个 TransitionBuilder.
 
-Easily use multiple TransitionBuilder in WidgetsApp MaterialApp or CupertinoApp
+Easily use multiple TransitionBuilder in WidgetsApp MaterialApp or CupertinoApp.
 
 ``` dart
 MaterialApp(
