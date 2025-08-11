@@ -10,7 +10,7 @@ Easily use multiple TransitionBuilder in WidgetsApp MaterialApp or CupertinoApp.
 
 ``` dart
 MaterialApp(
-    builder: [
+    builder: <TransitionBuilder?>[
         DevicePreview.appBuilder,
         FreeFEOS.builder,
     ].toBuilder, // 多构造器 MultiBuilder

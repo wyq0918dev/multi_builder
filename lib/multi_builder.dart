@@ -9,7 +9,7 @@ extension MultiBuilder on List<TransitionBuilder?> {
   ///
   /// ```dart
   /// MaterialApp(
-  ///   builder: [
+  ///   builder: <TransitionBuilder?>[
   ///       DevicePreview.appBuilder,
   ///       FreeFEOS.builder,
   ///   ].toBuilder, // multiple TransitionBuilder
