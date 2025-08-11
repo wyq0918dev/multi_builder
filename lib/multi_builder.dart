@@ -3,7 +3,7 @@ library;
 
 import 'package:flutter/widgets.dart';
 
-extension MultiBuilder on List<TransitionBuilder> {
+extension MultiBuilder on List<TransitionBuilder?> {
   /// Easily use multiple TransitionBuilder in WidgetsApp
   /// MaterialApp or CupertinoApp.
   ///
@@ -19,7 +19,9 @@ extension MultiBuilder on List<TransitionBuilder> {
   TransitionBuilder get toBuilder {
     return (context, child) {
       for (var builder in this) {
-        child = builder(context, child);
+        if (builder != null) {
+          child = builder(context, child);
+        }
       }
       return Container(child: child);
     };

@@ -16,7 +16,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      builder: <TransitionBuilder>[].toBuilder,
+      builder: <TransitionBuilder?>[].toBuilder,
       home: Scaffold(
         appBar: AppBar(title: const Text('Multi Builder Example')),
         body: Center(child: Text('Hello World')),
