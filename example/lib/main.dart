@@ -16,10 +16,24 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      builder: <TransitionBuilder?>[].toBuilder,
       home: Scaffold(
         appBar: AppBar(title: const Text('Multi Builder Example')),
         body: Center(child: Text('Hello World')),
+      ),
+      builder: <TransitionBuilder?>[].toBuilder,
+      theme: ThemeData(
+        brightness: Brightness.light,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.purple,
+          brightness: Brightness.light,
+        ),
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.purple,
+          brightness: Brightness.dark,
+        ),
       ),
     );
   }
