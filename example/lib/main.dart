@@ -1,18 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:multi_builder/multi_builder.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,8 +13,8 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(title: const Text('Multi Builder Example')),
         body: Center(child: Text('Hello World')),
       ),
-      builder:
-          <TransitionBuilder?>[].toBuilder, // support multi TransitionBuilder
+      // 支持多个 TransitionBuilder, 且支持为空
+      builder: <TransitionBuilder?>[].toBuilder,
       theme: ThemeData(
         brightness: Brightness.light,
         colorScheme: ColorScheme.fromSeed(
