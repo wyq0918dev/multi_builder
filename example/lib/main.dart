@@ -20,7 +20,8 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(title: const Text('Multi Builder Example')),
         body: Center(child: Text('Hello World')),
       ),
-      builder: <TransitionBuilder?>[].toBuilder,
+      builder:
+          <TransitionBuilder?>[].toBuilder, // support multi TransitionBuilder
       theme: ThemeData(
         brightness: Brightness.light,
         colorScheme: ColorScheme.fromSeed(
