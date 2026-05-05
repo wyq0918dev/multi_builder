@@ -10,6 +10,26 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  plugin_platform_interface: ^2.1.8
 
 dev_dependencies:
   flutter_lints: ^6.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        dartPluginClass: MultiBuilder
+      ios:
+        dartPluginClass: MultiBuilder
+      linux:
+        dartPluginClass: MultiBuilder
+      macos:
+        dartPluginClass: MultiBuilder
+      windows:
+        dartPluginClass: MultiBuilder
+      web:
+        pluginClass: MultiBuilderWeb
+        fileName: multi_builder_web.dart
