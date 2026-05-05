@@ -2,49 +2,9 @@
 library;
 
 import 'package:flutter/widgets.dart';
-import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-abstract base class MultiBuilderInterface extends PlatformInterface {
-  MultiBuilderInterface() : super(token: _token);
-
-  static final Object _token = Object();
-
-  static MultiBuilderInterface _instance = MultiBuilderDefault();
-
-  static MultiBuilderInterface get instance => _instance;
-
-  static set instance(MultiBuilderInterface instance) {
-    PlatformInterface.verify(instance, _token);
-    _instance = instance;
-  }
-
-  TransitionBuilder toBuilder(List<TransitionBuilder?> builders);
-}
-
-final class MultiBuilderDefault extends MultiBuilderInterface {
-  MultiBuilderDefault();
-
-  @override
-  TransitionBuilder toBuilder(List<TransitionBuilder?> builders) {
-    return (context, child) => Container(child: child);
-  }
-}
-
-final class MultiBuilderImpl extends MultiBuilderInterface {
-  MultiBuilderImpl();
-
-  @override
-  TransitionBuilder toBuilder(List<TransitionBuilder?> builders) {
-    return (context, child) {
-      for (var builder in builders) {
-        if (builder != null) {
-          child = builder(context, child);
-        }
-      }
-      return Container(child: child);
-    };
-  }
-}
+import 'src/impl.dart';
+import 'src/interface.dart';
 
 final class MultiBuilder {
   const MultiBuilder._();

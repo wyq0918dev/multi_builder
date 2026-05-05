@@ -3,7 +3,8 @@ library;
 
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
-import 'multi_builder.dart';
+import 'src/impl.dart';
+import 'src/interface.dart';
 
 final class MultiBuilderWeb {
   MultiBuilderWeb._();
