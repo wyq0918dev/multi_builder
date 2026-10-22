@@ -3,7 +3,7 @@ import 'package:multi_builder/multi_builder.dart';
 
 void main() => runApp(const MyApp());
 
-class MyApp extends StatelessWidget {
+final class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         body: Center(child: Text('Hello World')),
       ),
       // 支持多个 TransitionBuilder, 且支持为空
-      builder: <TransitionBuilder?>[].toBuilder,
+      builder: <TransitionBuilder?>[CustomBuilder.builder].toBuilder,
       theme: ThemeData(
         brightness: Brightness.light,
         colorScheme: ColorScheme.fromSeed(
@@ -30,5 +30,13 @@ class MyApp extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+final class CustomBuilder {
+  const CustomBuilder._();
+
+  static TransitionBuilder get builder {
+    return (context, child) => Container(child: child);
   }
 }

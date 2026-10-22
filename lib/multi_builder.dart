@@ -25,7 +25,7 @@ extension MultiBuilderExtension on List<TransitionBuilder?> {
   /// MaterialApp(
   ///   builder: <TransitionBuilder?>[
   ///       DevicePreview.appBuilder,
-  ///       FreeFEOS.builder,
+  ///       CustomBuilder.builder,
   ///   ].toBuilder, // 多构造器 MultiBuilder
   ///   home: const MyHomePage(),
   /// );
