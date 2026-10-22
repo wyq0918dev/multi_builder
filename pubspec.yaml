@@ -1,11 +1,11 @@
 name: multi_builder
 description: "Easily use multiple TransitionBuilder in WidgetsApp MaterialApp or CupertinoApp."
-version: 1.5.0
+version: 1.6.0
 repository: https://github.com/wyq0918dev/multi_builder
 
 environment:
-  sdk: ^3.12.0
-  flutter: ">=3.44.0"
+  sdk: ^3.13.0
+  flutter: ">=3.47.0"
 
 dependencies:
   flutter:
