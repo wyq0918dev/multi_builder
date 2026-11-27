@@ -1,3 +1,7 @@
+## 1.7.0
+
+* Support Flutter 3.50.
+
 ## 1.6.0
 
 * Support Flutter 3.47.
